@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="assets/css/tela.css">
+        <title>Inicio</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <img src="assets/img/barba.png" class="logo">
+            </div>
+        </header>
+        <main>
+            <div class="titulo">
+                <h1>Lista de Encomendas</h1>
+            </div>
+            <hr class = linha_sup>
+            <div>
+                <table id="tabela" class="tabela">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Valor Unitario</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cliente">
+                            <td scope="row">Francisco</th>
+                            <td>Pomada Clássica</td>
+                            <td class="quant">-2</td>
+                            <td class="valor">12</td>
+                            <td class="total">-</td>
+                        </tr>
+                        <tr class="cliente">
+                            <td scope="row">Machado</th>
+                            <td>Pomada Fixação Alta</td>
+                            <td class="quant">5</td>
+                            <td class="valor">-2</td>
+                            <td class="total">-</td>
+                        </tr>
+                        <tr class="cliente">
+                            <td scope="row">João</th>
+                            <td>Pomada Efeito Seco</td>
+                            <td class="quant">1</td>
+                            <td class="valor">9</td>
+                            <td class="total">-</td>
+                        </tr>
+                        <tr class="cliente">
+                            <td scope="row">Marcelo</th>
+                            <td>Pomada Efeito Molhado</td>
+                            <td class="quant">3</td>
+                            <td class="valor">15</td>
+                            <td class="total">-</td>
+                        </tr>
+                        <tr class="cliente">
+                            <td scope="row">Júnior</th>
+                            <td>Pomada Preta</td>
+                            <td class="quant">2</td>
+                            <td class="valor">16</td>
+                            <td class="total">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <hr class="linha_encomenda">
+                <h1 class="titulo">Adicionar nova encomenda</h1>
+                <hr class="linha_mid">
+            </div>
+            <ul id="mensagens-erro"></ul>
+            <form id="form-adiciona">
+                    <div class="item">
+                        <label for="nome" class="label">Nome:</label>
+                        <input type="text" id="nome" class="campo" required placeholder="Digite o nome do(a) cliente">
+                    </div>
+                    
+                    <div class="item">
+                        <label for="produto" class="label">Produto:</label>
+                        <select id="produto" class="campo">
+                            <option value="">Selecione o produto </option>
+						<option>Pomada Clássica</option>
+                        <option>Pomada Fixação Alta</option>
+						<option>Pomada Efeito Seco</option>
+						<option>Pomada Efeito Molhado</option>
+						<option>Pomada Preta</option>
+    
+                        </select>    
+                    </div>
+
+                    <div class="item">
+                        <label for="quantidade" class="label">Quantidade:</label>
+                        <input type="number" id="quantidade" class="campo" required placeholder ="Digite a quantidade solicitada">
+                    </div>
+
+                    <div class="item">
+                        <label for="val_unit" class="label">Valor Unitário:</label>
+                        <input type="number" id="val_unit" class="campo" required placeholder ="Digite o valor unitário">
+                    </div>
+    
+                    <input id="bot" type="submit" value="Adicionar Pedido" class="bot">
+            </form>
+        </main>
+        <script src="assets/js/remover_linha.js"></script>
+        <script src="assets/js/add_tabela.js"></script>
+        <script src="assets/js/calcula_total.js"></script>
+    </body>
+</html>
